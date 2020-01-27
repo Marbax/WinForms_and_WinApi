@@ -7,7 +7,7 @@
 
 [WinApi with empty peoject example](CW/lesson_1/winApi32EmptyDemo "CW\lesson_1\winApi32EmptyDemo")   
 
-[WinApi with basic template example](CW\lesson_1\winDeskAppDemo "CW\lesson_1\winDeskAppDemo")   
+[WinApi with basic template example](CW/lesson_1/winDeskAppDemo "CW\lesson_1\winDeskAppDemo")   
 
 ---
 
