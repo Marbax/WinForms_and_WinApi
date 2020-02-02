@@ -5,9 +5,9 @@
 
 ---
 
-[WinApi with empty peoject example](CW/lesson_1/winApi32EmptyDemo "CW\lesson_1\winApi32EmptyDemo")   
+[WinApi with empty peoject example](CW/lesson_01/winApi32EmptyDemo "CW\lesson_01\winApi32EmptyDemo")   
 
-[WinApi with basic template example](CW/lesson_1/winDeskAppDemo "CW\lesson_1\winDeskAppDemo")   
+[WinApi with basic template example](CW/lesson_01/winDeskAppDemo "CW\lesson_01\winDeskAppDemo")   
 
 ---
 
@@ -51,9 +51,9 @@ pow(2,16) = 65536
 
 ---
 
-[WinApi input events example](/CW/lesson_2/winApi_input_events "CW\lesson_2\winApi_input_events")   
+[WinApi input events example](CW/lesson_2/winApi_input_events "CW\lesson_2\winApi_input_events")   
 
-[WinForms timer example](/CW/lesson_2/winForms_timer "CW\lesson_2\winForms_timer")   
+[WinForms timer example](CW/lesson_2/winForms_timer "CW\lesson_2\winForms_timer")   
 
 ---
 
