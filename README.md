@@ -51,9 +51,9 @@ pow(2,16) = 65536
 
 ---
 
-[WinApi input events example](CW/lesson_2/winApi_input_events "CW\lesson_2\winApi_input_events")   
+[WinApi input events example](/CW/lesson_2/winApi_input_events "CW\lesson_2\winApi_input_events")   
 
-[WinForms timer example](CW/lesson_2/winForms_timer "CW\lesson_2\winForms_timer")   
+[WinForms timer example](/CW/lesson_2/winForms_timer "CW\lesson_2\winForms_timer")   
 
 ---
 
