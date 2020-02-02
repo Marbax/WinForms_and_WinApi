@@ -45,3 +45,18 @@ pow(2,16) = 65536
 ---
 
 </p></details>
+
+
+<details><summary> 2. WinAPI. Input. Timer.  </summary><p>
+
+---
+
+[WinApi input events example](CW/lesson_2/winApi_input_events "CW\lesson_2\winApi_input_events")   
+
+[WinForms timer example](CW/lesson_2/winForms_timer "CW\lesson_2\winForms_timer")   
+
+---
+
+</p></details>
+
+
