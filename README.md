@@ -60,3 +60,23 @@ pow(2,16) = 65536
 </p></details>
 
 
+<details><summary> 3. WinForms. Controls.  </summary><p>
+
+---
+
+[WinForms controls example](CW/lesson_03/color_mixer "CW\lesson_02\color_mixer")   
+
+[WinForms controls example](CW/lesson_03/converter_of_temp "CW\lesson_02\converter_of_temperature")   
+
+[WinForms controls example](CW/lesson_03/statistic_calc "CW\lesson_02\statistic_calc")   
+
+[WinForms controls example](CW/lesson_03/image_viewer "CW\lesson_02\image_viewer")   
+
+[WinForms controls example](CW/lesson_03/timer_v2 "CW\lesson_02\timer_v2")   
+
+---
+
+</p></details>
+
+
+
