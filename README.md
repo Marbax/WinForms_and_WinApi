@@ -74,6 +74,8 @@ pow(2,16) = 65536
 
 [WinForms controls example](CW/lesson_03/timer_v2 "CW\lesson_02\timer_v2")   
 
+[WinForms time span calc](HW/HW_03/time_span_calc "HW\HW_03\time_span_calc ")   
+
 ---
 
 </p></details>
