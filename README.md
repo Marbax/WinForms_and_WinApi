@@ -76,6 +76,8 @@ pow(2,16) = 65536
 
 [WinForms time span calc](HW/HW_03/time_span_calc "HW\HW_03\time_span_calc ")   
 
+[WinForms progressBar and text fromatter](HW/HW_03/profile_feeller "HW\HW_03\profile_feeller ")   
+
 ---
 
 </p></details>
