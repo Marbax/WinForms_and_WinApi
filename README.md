@@ -64,15 +64,15 @@ pow(2,16) = 65536
 
 ---
 
-[WinForms controls example](CW/lesson_03/color_mixer "CW\lesson_02\color_mixer")   
+[WinForms trackBar example](CW/lesson_03/color_mixer "CW\lesson_02\color_mixer")   
 
-[WinForms controls example](CW/lesson_03/converter_of_temp "CW\lesson_02\converter_of_temperature")   
+[WinForms radioBtn and textBox example](CW/lesson_03/converter_of_temp "CW\lesson_02\converter_of_temperature")   
 
-[WinForms controls example](CW/lesson_03/statistic_calc "CW\lesson_02\statistic_calc")   
+[WinForms textBox example](CW/lesson_03/statistic_calc "CW\lesson_02\statistic_calc")   
 
-[WinForms controls example](CW/lesson_03/image_viewer "CW\lesson_02\image_viewer")   
+[WinForms work with folders and images example](CW/lesson_03/image_viewer "CW\lesson_02\image_viewer")   
 
-[WinForms controls example](CW/lesson_03/timer_v2 "CW\lesson_02\timer_v2")   
+[WinForms time span example](CW/lesson_03/timer_v2 "CW\lesson_02\timer_v2")   
 
 [WinForms time span calc](HW/HW_03/time_span_calc "HW\HW_03\time_span_calc ")   
 
