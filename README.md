@@ -84,3 +84,31 @@ pow(2,16) = 65536
 
 
 
+<details><summary> 4. Additional Windows(dialogs).  </summary><p>
+
+---
+
+[WinForms work with folders and images example](CW/lesson_03/image_viewer "CW\lesson_02\image_viewer")   
+
+## Entity Framework
+- Создать БД
+- Поставить обновление по новизне
+- Скопировать путь подключения к БД (*.mdf -> Properties -> Connection String) и добавить в конфирацию приложения
+- Установить в проект **EntityFramework** (Solution Explorer -> Manage NuGet Packages)
+- Подключить (в DataManager) **EntityFramework** - ```using System.Data.Entity;```
+- Tools -> NuGet Package Manager -> Package Manager Console
+    -  Прописать в консоли PM ```enable-migrations```
+    -  Прописать в консоли PM ```add-migration "MigrationName"```
+    -  Прописать в консоли PM ```update-database"```
+
+
+[WinForms and EntityFramework example](CW/lesson_04/my_web_browser "CW\lesson_04\my_web_browser")   
+
+---
+
+> 1 HW по 5 уроку
+
+</p></details>
+
+
+
