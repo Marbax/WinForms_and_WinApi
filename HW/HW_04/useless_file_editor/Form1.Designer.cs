@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMain = new System.Windows.Forms.Panel();
             this.textBoxFileText = new System.Windows.Forms.TextBox();
             this.panelControls = new System.Windows.Forms.Panel();
@@ -36,9 +37,12 @@
             this.buttonEditFile = new System.Windows.Forms.Button();
             this.panelRightMarg = new System.Windows.Forms.Panel();
             this.panelLeftMarg = new System.Windows.Forms.Panel();
+            this.linkLabelHelp = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panelControls.SuspendLayout();
             this.panelBtns.SuspendLayout();
+            this.panelRightMarg.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -112,6 +116,8 @@
             // panelRightMarg
             // 
             this.panelRightMarg.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelRightMarg.Controls.Add(this.label1);
+            this.panelRightMarg.Controls.Add(this.linkLabelHelp);
             this.panelRightMarg.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRightMarg.Location = new System.Drawing.Point(505, 0);
             this.panelRightMarg.Name = "panelRightMarg";
@@ -127,18 +133,43 @@
             this.panelLeftMarg.Size = new System.Drawing.Size(200, 58);
             this.panelLeftMarg.TabIndex = 4;
             // 
+            // linkLabelHelp
+            // 
+            this.linkLabelHelp.AutoSize = true;
+            this.linkLabelHelp.Cursor = System.Windows.Forms.Cursors.Help;
+            this.linkLabelHelp.Location = new System.Drawing.Point(172, 47);
+            this.linkLabelHelp.Name = "linkLabelHelp";
+            this.linkLabelHelp.Size = new System.Drawing.Size(13, 13);
+            this.linkLabelHelp.TabIndex = 0;
+            this.linkLabelHelp.TabStop = true;
+            this.linkLabelHelp.Text = "&?";
+            this.linkLabelHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHelp_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(123, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 512);
             this.Controls.Add(this.panelMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Text Window";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelControls.ResumeLayout(false);
             this.panelBtns.ResumeLayout(false);
+            this.panelRightMarg.ResumeLayout(false);
+            this.panelRightMarg.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,6 +184,8 @@
         private System.Windows.Forms.Panel panelBtns;
         private System.Windows.Forms.Panel panelRightMarg;
         private System.Windows.Forms.Panel panelLeftMarg;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabelHelp;
     }
 }
 

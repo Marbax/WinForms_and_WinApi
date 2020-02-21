@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2EditWindow));
             this.panelControls = new System.Windows.Forms.Panel();
+            this.panelBtns = new System.Windows.Forms.Panel();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.panelLeftMargin = new System.Windows.Forms.Panel();
             this.panelText = new System.Windows.Forms.Panel();
             this.textBoxFileText = new System.Windows.Forms.TextBox();
-            this.panelLeftMargin = new System.Windows.Forms.Panel();
-            this.panelBtns = new System.Windows.Forms.Panel();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.panelControls.SuspendLayout();
-            this.panelText.SuspendLayout();
             this.panelBtns.SuspendLayout();
+            this.panelText.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControls
@@ -49,6 +50,46 @@
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(742, 58);
             this.panelControls.TabIndex = 0;
+            // 
+            // panelBtns
+            // 
+            this.panelBtns.Controls.Add(this.buttonCancel);
+            this.panelBtns.Controls.Add(this.buttonSave);
+            this.panelBtns.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBtns.Location = new System.Drawing.Point(266, 0);
+            this.panelBtns.Name = "panelBtns";
+            this.panelBtns.Size = new System.Drawing.Size(200, 58);
+            this.panelBtns.TabIndex = 1;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCancel.Location = new System.Drawing.Point(0, 28);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(200, 28);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSave.Location = new System.Drawing.Point(0, 0);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(200, 28);
+            this.buttonSave.TabIndex = 0;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // panelLeftMargin
+            // 
+            this.panelLeftMargin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLeftMargin.Location = new System.Drawing.Point(466, 0);
+            this.panelLeftMargin.Name = "panelLeftMargin";
+            this.panelLeftMargin.Size = new System.Drawing.Size(276, 58);
+            this.panelLeftMargin.TabIndex = 0;
             // 
             // panelText
             // 
@@ -69,46 +110,6 @@
             this.textBoxFileText.Size = new System.Drawing.Size(742, 399);
             this.textBoxFileText.TabIndex = 1;
             // 
-            // panelLeftMargin
-            // 
-            this.panelLeftMargin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLeftMargin.Location = new System.Drawing.Point(466, 0);
-            this.panelLeftMargin.Name = "panelLeftMargin";
-            this.panelLeftMargin.Size = new System.Drawing.Size(276, 58);
-            this.panelLeftMargin.TabIndex = 0;
-            // 
-            // panelBtns
-            // 
-            this.panelBtns.Controls.Add(this.buttonCancel);
-            this.panelBtns.Controls.Add(this.buttonSave);
-            this.panelBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBtns.Location = new System.Drawing.Point(266, 0);
-            this.panelBtns.Name = "panelBtns";
-            this.panelBtns.Size = new System.Drawing.Size(200, 58);
-            this.panelBtns.TabIndex = 1;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSave.Location = new System.Drawing.Point(0, 0);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(200, 28);
-            this.buttonSave.TabIndex = 0;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCancel.Location = new System.Drawing.Point(0, 28);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(200, 28);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // Form2EditWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,12 +117,13 @@
             this.ClientSize = new System.Drawing.Size(742, 457);
             this.Controls.Add(this.panelText);
             this.Controls.Add(this.panelControls);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2EditWindow";
             this.Text = "Edit Text";
             this.panelControls.ResumeLayout(false);
+            this.panelBtns.ResumeLayout(false);
             this.panelText.ResumeLayout(false);
             this.panelText.PerformLayout();
-            this.panelBtns.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
