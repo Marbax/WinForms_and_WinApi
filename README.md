@@ -88,7 +88,7 @@ pow(2,16) = 65536
 
 ---
 
-[WinForms work with folders and images example](CW/lesson_03/image_viewer "CW\lesson_02\image_viewer")   
+[WinForms work with folders and images example](CW/lesson_03/image_viewer "CW\lesson_03\image_viewer")   
 
 ## Entity Framework
 - Создать БД
@@ -103,6 +103,8 @@ pow(2,16) = 65536
 
 
 [WinForms and EntityFramework example](CW/lesson_04/my_web_browser "CW\lesson_04\my_web_browser")   
+
+[WinForms customm event , link, return from non modal form example](HW/HW_04/useless_file_editor "HW\HW_04\useless_file_editor")   
 
 ---
 
