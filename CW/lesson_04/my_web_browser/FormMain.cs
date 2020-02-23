@@ -13,13 +13,13 @@ using System.Text.RegularExpressions;
 
 namespace my_web_browser
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         private Regex _regexWebPath = new Regex(@"^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$");
 
         private DataManager _dm = new DataManager();
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             CustomInit();
@@ -44,7 +44,8 @@ namespace my_web_browser
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            UpdateListBox();
+            UpdateComboBoxCategories();
+            UpdateListBoxSites();
         }
 
         private void WebBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
@@ -104,20 +105,60 @@ namespace my_web_browser
             {
                 _dm.Categories.Add(new Category() { Name = formAddCategory.CategoryName });
                 _dm.SaveChanges();
-                UpdateListBox();
+                UpdateComboBoxCategories();
             }
         }
 
-        private void UpdateListBox()
+        private void UpdateComboBoxCategories()
         {
-            comboBox1.Items.Clear();
+            comboBoxCategories.Items.Clear();
             foreach (var item in _dm.Categories)
             {
-                if (!comboBox1.Items.Contains(item))
-                    comboBox1.Items.Add(item);
+                comboBoxCategories.Items.Add(item);
             }
-            comboBox1.DisplayMember = "Name";
-            comboBox1.SelectedIndex = 0;
+            comboBoxCategories.DisplayMember = "Name";
+            comboBoxCategories.SelectedIndex = 0;
+        }
+
+        private void UpdateListBoxSites()
+        {
+            listBoxSites.Items.Clear();
+            foreach (var item in _dm.Sites)
+            {
+                listBoxSites.Items.Add(item);
+            }
+            listBoxSites.DisplayMember = "Name";
+            listBoxSites.SelectedIndex = 0;
+        }
+
+        private void RemoveCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_dm.Categories.Count() > 0)
+            {
+                FormRemoveCategory fRemCat = new FormRemoveCategory();
+                foreach (var item in _dm.Categories)
+                {
+                    fRemCat.Categories.Add(item);
+                }
+                if (fRemCat.ShowDialog() == DialogResult.OK)
+                {
+                    _dm.Categories.RemoveRange(fRemCat.ToRemoveCat);
+                    _dm.SaveChanges();
+                    UpdateComboBoxCategories();
+                }
+            }
+        }
+
+        private void AddSiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddSite fAddSite = new FormAddSite() { SiteUrl = webBrowser1.Url.ToString() };
+            if (fAddSite.ShowDialog() == DialogResult.OK)
+            {
+                _dm.Sites.Add(new Site() { Name = fAddSite.SiteName, Url = fAddSite.SiteUrl });
+                _dm.SaveChanges();
+                UpdateListBoxSites();
+            }
+
         }
     }
 }

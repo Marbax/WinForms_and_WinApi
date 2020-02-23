@@ -37,7 +37,7 @@
             // labelCategoryName
             // 
             this.labelCategoryName.AutoSize = true;
-            this.labelCategoryName.Location = new System.Drawing.Point(69, 25);
+            this.labelCategoryName.Location = new System.Drawing.Point(69, 12);
             this.labelCategoryName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategoryName.Name = "labelCategoryName";
             this.labelCategoryName.Size = new System.Drawing.Size(136, 16);
@@ -46,14 +46,14 @@
             // 
             // textBoxCategoryName
             // 
-            this.textBoxCategoryName.Location = new System.Drawing.Point(20, 44);
+            this.textBoxCategoryName.Location = new System.Drawing.Point(20, 31);
             this.textBoxCategoryName.Name = "textBoxCategoryName";
             this.textBoxCategoryName.Size = new System.Drawing.Size(255, 22);
             this.textBoxCategoryName.TabIndex = 1;
             // 
             // buttonRefuse
             // 
-            this.buttonRefuse.Location = new System.Drawing.Point(31, 72);
+            this.buttonRefuse.Location = new System.Drawing.Point(31, 59);
             this.buttonRefuse.Name = "buttonRefuse";
             this.buttonRefuse.Size = new System.Drawing.Size(100, 25);
             this.buttonRefuse.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(166, 72);
+            this.buttonSave.Location = new System.Drawing.Point(166, 59);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(100, 25);
             this.buttonSave.TabIndex = 3;
@@ -75,13 +75,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 116);
+            this.ClientSize = new System.Drawing.Size(298, 103);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonRefuse);
             this.Controls.Add(this.textBoxCategoryName);
             this.Controls.Add(this.labelCategoryName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddCategory";
             this.Text = "Add Category";
             this.Load += new System.EventHandler(this.FormAddCategory_Load);

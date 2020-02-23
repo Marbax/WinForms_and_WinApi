@@ -1,7 +1,7 @@
 ﻿
 namespace my_web_browser
 {
-    class Site
+    public class Site
     {
         public int Id { get; set; }
 

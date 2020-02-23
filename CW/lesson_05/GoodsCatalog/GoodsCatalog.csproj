@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F23E550E-EEAD-47BF-88F0-373D2CC16F5D}</ProjectGuid>
+    <ProjectGuid>{0B8AF5AC-8F1D-4439-8888-1EA3B5AFC49B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>my_web_browser</RootNamespace>
-    <AssemblyName>my_web_browser</AssemblyName>
+    <RootNamespace>GoodsCatalog</RootNamespace>
+    <AssemblyName>GoodsCatalog</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -79,46 +79,20 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddCategory.Designer.cs">
-      <DependentUpon>FormAddCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormAddSite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddSite.Designer.cs">
-      <DependentUpon>FormAddSite.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRemoveCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRemoveCategory.Designer.cs">
-      <DependentUpon>FormRemoveCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002151059072_FirstMigration.cs" />
-    <Compile Include="Migrations\202002151059072_FirstMigration.designer.cs">
-      <DependentUpon>202002151059072_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202002220822015_init.cs" />
+    <Compile Include="Migrations\202002220822015_init.designer.cs">
+      <DependentUpon>202002220822015_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.cs" />
+    <Compile Include="Provider.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddCategory.resx">
-      <DependentUpon>FormAddCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddSite.resx">
-      <DependentUpon>FormAddSite.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRemoveCategory.resx">
-      <DependentUpon>FormRemoveCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002151059072_FirstMigration.resx">
-      <DependentUpon>202002151059072_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002220822015_init.resx">
+      <DependentUpon>202002220822015_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,13 +119,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\iconfinder_Home_669946.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\iconfinder_forward_5355374.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\iconfinder_arrow_backward_left_2571218.png" />
+    <None Include="img\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database1.mdf">

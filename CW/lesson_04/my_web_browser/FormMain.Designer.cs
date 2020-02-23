@@ -1,6 +1,6 @@
 ﻿namespace my_web_browser
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBoxSites = new System.Windows.Forms.ListBox();
+            this.comboBoxCategories = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +48,11 @@
             this.panelGOBtn = new System.Windows.Forms.Panel();
             this.buttonGO = new System.Windows.Forms.Button();
             this.panelUrlBtns = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.buttonForward = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,34 +64,34 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.listBoxSites);
+            this.panel1.Controls.Add(this.comboBoxCategories);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 642);
+            this.panel1.Size = new System.Drawing.Size(235, 660);
             this.panel1.TabIndex = 0;
             // 
-            // listBox1
+            // listBoxSites
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(0, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(235, 618);
-            this.listBox1.TabIndex = 2;
+            this.listBoxSites.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxSites.FormattingEnabled = true;
+            this.listBoxSites.ItemHeight = 16;
+            this.listBoxSites.Location = new System.Drawing.Point(0, 24);
+            this.listBoxSites.Name = "listBoxSites";
+            this.listBoxSites.ScrollAlwaysVisible = true;
+            this.listBoxSites.Size = new System.Drawing.Size(235, 636);
+            this.listBoxSites.TabIndex = 2;
             // 
-            // comboBox1
+            // comboBoxCategories
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 24);
-            this.comboBox1.TabIndex = 1;
+            this.comboBoxCategories.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBoxCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategories.FormattingEnabled = true;
+            this.comboBoxCategories.Location = new System.Drawing.Point(0, 0);
+            this.comboBoxCategories.Name = "comboBoxCategories";
+            this.comboBoxCategories.Size = new System.Drawing.Size(235, 24);
+            this.comboBoxCategories.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -101,7 +101,7 @@
             this.pagesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,15 +117,16 @@
             // addCategoryToolStripMenuItem
             // 
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.addCategoryToolStripMenuItem.Text = "&Add Category";
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.AddCategoryToolStripMenuItem_Click);
             // 
             // removeCategoryToolStripMenuItem
             // 
             this.removeCategoryToolStripMenuItem.Name = "removeCategoryToolStripMenuItem";
-            this.removeCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeCategoryToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.removeCategoryToolStripMenuItem.Text = "&Remove Category";
+            this.removeCategoryToolStripMenuItem.Click += new System.EventHandler(this.RemoveCategoryToolStripMenuItem_Click);
             // 
             // sitesToolStripMenuItem
             // 
@@ -142,6 +143,7 @@
             this.addSiteToolStripMenuItem.Name = "addSiteToolStripMenuItem";
             this.addSiteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.addSiteToolStripMenuItem.Text = "&Add Site";
+            this.addSiteToolStripMenuItem.Click += new System.EventHandler(this.AddSiteToolStripMenuItem_Click);
             // 
             // removeSiteToolStripMenuItem
             // 
@@ -177,7 +179,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(235, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 34);
+            this.panel2.Size = new System.Drawing.Size(999, 34);
             this.panel2.TabIndex = 2;
             // 
             // panelUrl
@@ -186,17 +188,18 @@
             this.panelUrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUrl.Location = new System.Drawing.Point(97, 0);
             this.panelUrl.Name = "panelUrl";
-            this.panelUrl.Size = new System.Drawing.Size(665, 34);
+            this.panelUrl.Size = new System.Drawing.Size(832, 34);
             this.panelUrl.TabIndex = 5;
             // 
             // textBoxUrl
             // 
             this.textBoxUrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUrl.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUrl.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxUrl.Location = new System.Drawing.Point(0, 0);
             this.textBoxUrl.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxUrl.Name = "textBoxUrl";
-            this.textBoxUrl.Size = new System.Drawing.Size(665, 29);
+            this.textBoxUrl.Size = new System.Drawing.Size(832, 31);
             this.textBoxUrl.TabIndex = 0;
             this.textBoxUrl.Click += new System.EventHandler(this.TextBoxUrl_Click);
             this.textBoxUrl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxUrl_KeyDown);
@@ -205,7 +208,7 @@
             // 
             this.panelGOBtn.Controls.Add(this.buttonGO);
             this.panelGOBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelGOBtn.Location = new System.Drawing.Point(762, 0);
+            this.panelGOBtn.Location = new System.Drawing.Point(929, 0);
             this.panelGOBtn.Name = "panelGOBtn";
             this.panelGOBtn.Size = new System.Drawing.Size(70, 34);
             this.panelGOBtn.TabIndex = 4;
@@ -231,27 +234,6 @@
             this.panelUrlBtns.Name = "panelUrlBtns";
             this.panelUrlBtns.Size = new System.Drawing.Size(97, 34);
             this.panelUrlBtns.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.webBrowser1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(235, 58);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(832, 608);
-            this.panel6.TabIndex = 3;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(832, 608);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("https://google.com", System.UriKind.Absolute);
-            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.WebBrowser1_Navigated);
             // 
             // buttonForward
             // 
@@ -290,11 +272,32 @@
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // Form1
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.webBrowser1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(235, 58);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(999, 626);
+            this.panel6.TabIndex = 3;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 1);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(999, 625);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("https://google.com", System.UriKind.Absolute);
+            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.WebBrowser1_Navigated);
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 666);
+            this.ClientSize = new System.Drawing.Size(1234, 684);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -303,7 +306,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Mrbx";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -323,7 +326,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCategories;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
@@ -334,7 +337,7 @@
         private System.Windows.Forms.ToolStripMenuItem editSiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savePageToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxSites;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelUrl;
         private System.Windows.Forms.TextBox textBoxUrl;
