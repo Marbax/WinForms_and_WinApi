@@ -106,9 +106,11 @@ pow(2,16) = 65536
 
 [WinForms customm event , link, return from non modal form example](HW/HW_04/useless_file_editor "HW\HW_04\useless_file_editor")   
 
----
+[WinForms Directory and non modal form example](HW/HW_04/file_search "HW\HW_04\file_search")   
 
-> 1 HW по 5 уроку
+[WinForms types convert , additional form throught properties example](HW/HW_04/comp_pereph_company "HW\HW_04\comp_pereph_company")   
+
+---
 
 </p></details>
 
