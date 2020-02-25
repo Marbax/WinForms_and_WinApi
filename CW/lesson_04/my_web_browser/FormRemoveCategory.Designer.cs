@@ -37,18 +37,21 @@
             // listBoxCategories
             // 
             this.listBoxCategories.FormattingEnabled = true;
-            this.listBoxCategories.Location = new System.Drawing.Point(12, 12);
+            this.listBoxCategories.ItemHeight = 16;
+            this.listBoxCategories.Location = new System.Drawing.Point(16, 15);
+            this.listBoxCategories.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxCategories.Name = "listBoxCategories";
             this.listBoxCategories.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxCategories.Size = new System.Drawing.Size(284, 199);
+            this.listBoxCategories.Size = new System.Drawing.Size(377, 244);
             this.listBoxCategories.TabIndex = 0;
             this.listBoxCategories.SelectedIndexChanged += new System.EventHandler(this.ListBoxCategories_SelectedIndexChanged);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(32, 218);
+            this.buttonRemove.Location = new System.Drawing.Point(43, 268);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemove.Size = new System.Drawing.Size(100, 28);
             this.buttonRemove.TabIndex = 1;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -56,9 +59,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(210, 247);
+            this.buttonCancel.Location = new System.Drawing.Point(280, 304);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(100, 28);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -66,9 +70,10 @@
             // 
             // buttonSaveAndCancel
             // 
-            this.buttonSaveAndCancel.Location = new System.Drawing.Point(167, 218);
+            this.buttonSaveAndCancel.Location = new System.Drawing.Point(223, 268);
+            this.buttonSaveAndCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSaveAndCancel.Name = "buttonSaveAndCancel";
-            this.buttonSaveAndCancel.Size = new System.Drawing.Size(118, 23);
+            this.buttonSaveAndCancel.Size = new System.Drawing.Size(157, 28);
             this.buttonSaveAndCancel.TabIndex = 3;
             this.buttonSaveAndCancel.Text = "Save And Cancel";
             this.buttonSaveAndCancel.UseVisualStyleBackColor = true;
@@ -76,13 +81,18 @@
             // 
             // FormRemoveCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 278);
+            this.ClientSize = new System.Drawing.Size(411, 342);
             this.Controls.Add(this.buttonSaveAndCancel);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.listBoxCategories);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRemoveCategory";
             this.Text = "FormRemoveCategory";
             this.Load += new System.EventHandler(this.FormRemoveCategory_Load);

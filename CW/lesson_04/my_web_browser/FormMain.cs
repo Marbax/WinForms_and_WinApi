@@ -46,6 +46,8 @@ namespace my_web_browser
         {
             UpdateComboBoxCategories();
             UpdateListBoxSites();
+            comboBoxCategories.DisplayMember = "Name";
+            listBoxSites.DisplayMember = "Name";
         }
 
         private void WebBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
@@ -69,16 +71,6 @@ namespace my_web_browser
             GoToSite();
         }
 
-        private void GoToSite()
-        {
-            if (!string.IsNullOrEmpty(textBoxUrl.Text))
-            {
-                if (_regexWebPath.IsMatch(textBoxUrl.Text))
-                    webBrowser1.Navigate(new Uri($"{textBoxUrl.Text}"));
-                else
-                    webBrowser1.Navigate(new Uri($"http://google.com/search?q={textBoxUrl.Text}"));
-            }
-        }
 
         private void TextBoxUrl_KeyDown(object sender, KeyEventArgs e)
         {
@@ -116,19 +108,23 @@ namespace my_web_browser
             {
                 comboBoxCategories.Items.Add(item);
             }
-            comboBoxCategories.DisplayMember = "Name";
-            comboBoxCategories.SelectedIndex = 0;
+            if (comboBoxCategories.Items.Count > 0)
+                comboBoxCategories.SelectedIndex = 0;
         }
 
         private void UpdateListBoxSites()
         {
             listBoxSites.Items.Clear();
-            foreach (var item in _dm.Sites)
-            {
-                listBoxSites.Items.Add(item);
-            }
-            listBoxSites.DisplayMember = "Name";
-            listBoxSites.SelectedIndex = 0;
+
+            if (_dm.Sites.Count() > 0 && comboBoxCategories.SelectedIndex != -1)
+                foreach (Site item in _dm.Sites)
+                {
+                    if (item.Category_Id == ((Category)comboBoxCategories.SelectedItem).Id)
+                        listBoxSites.Items.Add(item);
+                }
+
+            if (listBoxSites.Items.Count > 0)
+                listBoxSites.SelectedIndex = 0;
         }
 
         private void RemoveCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,12 +132,23 @@ namespace my_web_browser
             if (_dm.Categories.Count() > 0)
             {
                 FormRemoveCategory fRemCat = new FormRemoveCategory();
-                foreach (var item in _dm.Categories)
+                foreach (Category item in _dm.Categories)
                 {
                     fRemCat.Categories.Add(item);
                 }
                 if (fRemCat.ShowDialog() == DialogResult.OK)
                 {
+                    List<int> cat_ids = new List<int>();
+                    cat_ids.AddRange(fRemCat.ToRemoveCat.Select(c => c.Id));
+
+                    List<Site> to_del = new List<Site>();
+                    cat_ids.ForEach(id => to_del.AddRange(_dm.Sites.Where(s => s.Category_Id == id)));
+
+                    if (to_del.Count > 0)
+                    {
+                        _dm.Sites.RemoveRange(to_del);
+                        UpdateListBoxSites();
+                    }
                     _dm.Categories.RemoveRange(fRemCat.ToRemoveCat);
                     _dm.SaveChanges();
                     UpdateComboBoxCategories();
@@ -151,14 +158,52 @@ namespace my_web_browser
 
         private void AddSiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAddSite fAddSite = new FormAddSite() { SiteUrl = webBrowser1.Url.ToString() };
+            FormAddSite fAddSite = new FormAddSite() { SiteUrl = webBrowser1.Url.ToString(), Categories = _dm.Categories.ToList() };
             if (fAddSite.ShowDialog() == DialogResult.OK)
             {
-                _dm.Sites.Add(new Site() { Name = fAddSite.SiteName, Url = fAddSite.SiteUrl });
+                _dm.Sites.Add(new Site() { Name = fAddSite.SiteName, Url = fAddSite.SiteUrl, Category_Id = fAddSite.SelectedCategory });
                 _dm.SaveChanges();
                 UpdateListBoxSites();
             }
+        }
 
+        private void GoToSite()
+        {
+            if (!string.IsNullOrEmpty(textBoxUrl.Text))
+            {
+                if (_regexWebPath.IsMatch(textBoxUrl.Text))
+                    webBrowser1.Navigate(new Uri($"{textBoxUrl.Text}"));
+                else
+                    webBrowser1.Navigate(new Uri($"http://google.com/search?q={textBoxUrl.Text}"));
+            }
+        }
+
+
+        private void comboBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateListBoxSites();
+        }
+
+        private void removeSiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_dm.Sites.Count() > 0)
+            {
+                FormRemoveSite fRemSite = new FormRemoveSite() { Sites = _dm.Sites.ToList() };
+                if (fRemSite.ShowDialog() == DialogResult.OK)
+                {
+                    _dm.Sites.RemoveRange(fRemSite.ToRemoveSites);
+                    _dm.SaveChanges();
+                    UpdateListBoxSites();
+                }
+            }
+        }
+
+        private void listBoxSites_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int _lb_item_index = this.listBoxSites.IndexFromPoint(e.Location);
+
+            if (_lb_item_index != -1)
+                webBrowser1.Navigate(((Site)listBoxSites.Items[_lb_item_index]).Url);
         }
     }
 }

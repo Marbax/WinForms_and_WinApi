@@ -122,12 +122,12 @@
     <None Include="img\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
+    <Content Include="GoodsDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database1_log.ldf">
+    <Content Include="GoodsDB_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
+      <DependentUpon>GoodsDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

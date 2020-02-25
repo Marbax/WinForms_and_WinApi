@@ -82,6 +82,7 @@
             this.listBoxSites.ScrollAlwaysVisible = true;
             this.listBoxSites.Size = new System.Drawing.Size(235, 636);
             this.listBoxSites.TabIndex = 2;
+            this.listBoxSites.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxSites_MouseDoubleClick);
             // 
             // comboBoxCategories
             // 
@@ -92,6 +93,7 @@
             this.comboBoxCategories.Name = "comboBoxCategories";
             this.comboBoxCategories.Size = new System.Drawing.Size(235, 24);
             this.comboBoxCategories.TabIndex = 1;
+            this.comboBoxCategories.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategories_SelectedIndexChanged);
             // 
             // menuStrip1
             // 
@@ -150,6 +152,7 @@
             this.removeSiteToolStripMenuItem.Name = "removeSiteToolStripMenuItem";
             this.removeSiteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.removeSiteToolStripMenuItem.Text = "&Remove Site";
+            this.removeSiteToolStripMenuItem.Click += new System.EventHandler(this.removeSiteToolStripMenuItem_Click);
             // 
             // editSiteToolStripMenuItem
             // 

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace my_web_browser
@@ -32,9 +26,6 @@ namespace my_web_browser
         public FormRemoveCategory()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void ListBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +36,7 @@ namespace my_web_browser
         private void FormRemoveCategory_Load(object sender, EventArgs e)
         {
             UpdateListBoxCat();
+            listBoxCategories.DisplayMember = "Name";
         }
 
         private void ButtonRemove_Click(object sender, EventArgs e)
@@ -63,8 +55,9 @@ namespace my_web_browser
             {
                 listBoxCategories.Items.Add(item);
             }
-            listBoxCategories.DisplayMember = "Name";
-            listBoxCategories.SelectedIndex = 0;
+
+            if (listBoxCategories.Items.Count > 0)
+                listBoxCategories.SelectedIndex = 0;
         }
 
         private void ButtonSaveAndCancel_Click(object sender, EventArgs e)

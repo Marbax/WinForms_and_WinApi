@@ -97,6 +97,12 @@
     <Compile Include="FormRemoveCategory.Designer.cs">
       <DependentUpon>FormRemoveCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRemoveSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveSite.Designer.cs">
+      <DependentUpon>FormRemoveSite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202002151059072_FirstMigration.cs" />
     <Compile Include="Migrations\202002151059072_FirstMigration.designer.cs">
       <DependentUpon>202002151059072_FirstMigration.cs</DependentUpon>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRemoveCategory.resx">
       <DependentUpon>FormRemoveCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveSite.resx">
+      <DependentUpon>FormRemoveSite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002151059072_FirstMigration.resx">
       <DependentUpon>202002151059072_FirstMigration.cs</DependentUpon>
@@ -154,12 +163,12 @@
     <None Include="img\iconfinder_arrow_backward_left_2571218.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
+    <Content Include="BookmarksDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database1_log.ldf">
+    <Content Include="BookmarksDB_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
+      <DependentUpon>BookmarksDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

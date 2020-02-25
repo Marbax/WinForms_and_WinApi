@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace my_web_browser
 {
+    /// <summary>
+    /// 1. Добавление сайтов в каталог интернет-ресурсов
+    /// 2. Удаление сайтов из каталога интернет-ресурсов
+    /// 3. Переходы к загрузке страниц по адресам, указанным в списке сайтов для данной категории
+    /// </summary>
     static class Program
     {
         /// <summary>

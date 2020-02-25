@@ -53,7 +53,7 @@
             // 
             // buttonRefuse
             // 
-            this.buttonRefuse.Location = new System.Drawing.Point(31, 59);
+            this.buttonRefuse.Location = new System.Drawing.Point(163, 59);
             this.buttonRefuse.Name = "buttonRefuse";
             this.buttonRefuse.Size = new System.Drawing.Size(100, 25);
             this.buttonRefuse.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(166, 59);
+            this.buttonSave.Location = new System.Drawing.Point(32, 59);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(100, 25);
             this.buttonSave.TabIndex = 3;
@@ -81,7 +81,10 @@
             this.Controls.Add(this.textBoxCategoryName);
             this.Controls.Add(this.labelCategoryName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAddCategory";
             this.Text = "Add Category";
             this.Load += new System.EventHandler(this.FormAddCategory_Load);

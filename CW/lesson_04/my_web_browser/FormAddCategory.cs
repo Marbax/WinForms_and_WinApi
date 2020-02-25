@@ -16,9 +16,6 @@ namespace my_web_browser
         public FormAddCategory()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void FormAddCategory_Load(object sender, EventArgs e)
@@ -33,7 +30,7 @@ namespace my_web_browser
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBoxCategoryName.Text))
+            if (!string.IsNullOrEmpty(textBoxCategoryName.Text.Trim(' ')))
             {
                 CategoryName = textBoxCategoryName.Text;
                 this.DialogResult = DialogResult.OK;
