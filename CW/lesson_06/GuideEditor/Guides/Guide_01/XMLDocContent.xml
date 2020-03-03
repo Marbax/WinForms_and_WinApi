@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root name="Short Documentation about WinForms">
+  <chapter name="Introdaction">
+    <paragraph name="History"/>
+    <paragraph name="Analyz"/>
+    <paragraph name="Good Sides"/>
+  </chapter>
+  <chapter name="Basic controls">
+    <paragraph name="Buttons"/>
+    <paragraph name="Text"/>
+    <paragraph name="List"/>
+  </chapter>
+  <chapter name="Dinamyc controls"></chapter>
+  <chapter name="Special controls"></chapter>
+  <chapter name="Basic controls"></chapter>
+  <chapter name="Finalization"></chapter>
+</root>

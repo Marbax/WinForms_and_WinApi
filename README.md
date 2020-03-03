@@ -116,3 +116,31 @@ pow(2,16) = 65536
 
 
 
+<details><summary> 5. ListView.  </summary><p>
+
+---
+
+[WinForms ListView control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
+
+---
+
+</p></details>
+
+
+
+<details><summary> 6. TreeView RichTexBox.  </summary><p>
+
+---
+
+[WinForms ListView control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
+
+[WinForms XMLParse TreeView RichTexBox control example](CW/lesson_06/GuideEditor "CW\lesson_05\GuideEditor")   
+
+>***HW - 1 task(treeView UROK_07) and complete GoodsCatalog***
+
+---
+
+</p></details>
+
+
+

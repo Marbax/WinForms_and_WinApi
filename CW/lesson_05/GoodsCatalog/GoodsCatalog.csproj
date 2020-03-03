@@ -71,13 +71,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddItem.Designer.cs">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="DataManager.cs" />
+    <Compile Include="FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveProduct.Designer.cs">
+      <DependentUpon>FormRemoveProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveProvider.Designer.cs">
+      <DependentUpon>FormRemoveProvider.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202002220822015_init.cs" />
     <Compile Include="Migrations\202002220822015_init.designer.cs">
@@ -88,8 +112,26 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="FormRemoveCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveCategory.Designer.cs">
+      <DependentUpon>FormRemoveCategory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAddItem.resx">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveProduct.resx">
+      <DependentUpon>FormRemoveProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveProvider.resx">
+      <DependentUpon>FormRemoveProvider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002220822015_init.resx">
       <DependentUpon>202002220822015_init.cs</DependentUpon>
@@ -104,6 +146,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormRemoveCategory.resx">
+      <DependentUpon>FormRemoveCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

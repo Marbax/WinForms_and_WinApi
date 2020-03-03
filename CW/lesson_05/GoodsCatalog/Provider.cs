@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoodsCatalog
 {
-    class Provider
+    public class Provider
     {
         public int Id { get; set; }
 
