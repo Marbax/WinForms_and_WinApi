@@ -136,7 +136,7 @@ pow(2,16) = 65536
 
 [WinForms XMLParse TreeView RichTexBox control example](CW/lesson_06/GuideEditor "CW\lesson_05\GuideEditor")   
 
->***HW - 1 task(treeView UROK_07) and complete GoodsCatalog***
+[WinForms TreeView ListView control example](HW/HW_06/my_explorer "HW\HW_06\my_explorer")   
 
 ---
 
