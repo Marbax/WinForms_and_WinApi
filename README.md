@@ -143,4 +143,17 @@ pow(2,16) = 65536
 </p></details>
 
 
+<details><summary> 7. .  </summary><p>
+
+---
+
+[WinForms ListView control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
+
+[WinForms TreeView ListView control example](HW/HW_06/my_explorer "HW\HW_06\my_explorer")   
+
+---
+
+</p></details>
+
+
 
