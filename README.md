@@ -143,13 +143,13 @@ pow(2,16) = 65536
 </p></details>
 
 
-<details><summary> 7. .  </summary><p>
+<details><summary> 7.GDI+ .  </summary><p>
 
 ---
 
-[WinForms ListView control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
+[WinForms drawing example](CW/lesson_07/diagram_editor "CW\lesson_07\diagram_editor")   
 
-[WinForms TreeView ListView control example](HW/HW_06/my_explorer "HW\HW_06\my_explorer")   
+[WinForms drawing example](CW/lesson_07/graphics_demo "CW\lesson_07\graphics_demo")   
 
 ---
 
