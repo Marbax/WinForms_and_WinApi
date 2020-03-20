@@ -19,7 +19,7 @@ namespace system_anim
 
         private List<Planet> _planets = new List<Planet>();
 
-        private readonly PointF _center;
+        public PointF Center { get => new PointF(pictureBoxSystem.Width / 2, pictureBoxSystem.Height / 2); }
         Matrix _matrix = new Matrix();
 
         private float _size_eq = 0.5f;
@@ -31,9 +31,6 @@ namespace system_anim
         public FormMain()
         {
             InitializeComponent();
-
-            _center = new PointF(pictureBoxSystem.Width / 2, pictureBoxSystem.Height / 2);
-
 
             _current_size_eq = _size_eq;
             _current_speed_eq = _speed_eq;
@@ -47,26 +44,26 @@ namespace system_anim
         {
             if (_planets.Count > 0)
                 _planets.Clear();
-            _sun = new Sun(@"..\..\img\Sun.png", pictureBoxSystem, _center, 12963f, _current_size_eq);
+            _sun = new Sun(@"..\..\img\Sun.png", pictureBoxSystem, Center, 12963f, _current_size_eq);
 
             float distanceX = _sun.Destination.Right + _sun.Size / 2;
-            _planets.Add(new Planet(@"..\..\img\Mercury.png", pictureBoxSystem, distanceX, _center.Y, 844f, 0.387f, 47.87f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Mercury.png", pictureBoxSystem, distanceX, Center.Y, 844f, 0.387f, 47.87f, _current_size_eq));
             distanceX += _planets[0].Size * 3;
-            _planets.Add(new Planet(@"..\..\img\Venus.png", pictureBoxSystem, distanceX, _center.Y, 2405f, 0.723f, 35.02f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Venus.png", pictureBoxSystem, distanceX, Center.Y, 2405f, 0.723f, 35.02f, _current_size_eq));
             distanceX += _planets[1].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Earth.png", pictureBoxSystem, distanceX, _center.Y, 2437f, 1f, 29.76f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Earth.png", pictureBoxSystem, distanceX, Center.Y, 2437f, 1f, 29.76f, _current_size_eq));
             distanceX += _planets[2].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Mars.png", pictureBoxSystem, distanceX, _center.Y, 1239f, 1.52f, 24.13f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Mars.png", pictureBoxSystem, distanceX, Center.Y, 1239f, 1.52f, 24.13f, _current_size_eq));
             distanceX += _planets[3].Size * 4;
-            _planets.Add(new Planet(@"..\..\img\Jupiter.png", pictureBoxSystem, distanceX, _center.Y, 7149f, 5.2f, 13.07f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Jupiter.png", pictureBoxSystem, distanceX, Center.Y, 7149f, 5.2f, 13.07f, _current_size_eq));
             distanceX += _planets[4].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Saturn.png", pictureBoxSystem, distanceX, _center.Y, 6027f, 9.54f, 9.67f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Saturn.png", pictureBoxSystem, distanceX, Center.Y, 6027f, 9.54f, 9.67f, _current_size_eq));
             distanceX += _planets[5].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Uranus.png", pictureBoxSystem, distanceX, _center.Y, 2556f, 19.19f, 6.84f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Uranus.png", pictureBoxSystem, distanceX, Center.Y, 2556f, 19.19f, 6.84f, _current_size_eq));
             distanceX += _planets[6].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Neptune.png", pictureBoxSystem, distanceX, _center.Y, 2476f, 30.07f, 5.48f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Neptune.png", pictureBoxSystem, distanceX, Center.Y, 2476f, 30.07f, 5.48f, _current_size_eq));
             distanceX += _planets[7].Size * 2;
-            _planets.Add(new Planet(@"..\..\img\Pluto.png", pictureBoxSystem, distanceX, _center.Y, 844f, 39.07f, 4.75f, _current_size_eq));
+            _planets.Add(new Planet(@"..\..\img\Pluto.png", pictureBoxSystem, distanceX, Center.Y, 844f, 39.07f, 4.75f, _current_size_eq));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,7 +73,6 @@ namespace system_anim
         private void pictureBoxSystem_Paint(object sender, PaintEventArgs e)
         {
             DrawSun(e.Graphics);
-            //DrawOrbits(e.Graphics);
             DrawPlanets(e.Graphics);
         }
         private void DrawSun(Graphics graphics)
@@ -85,28 +81,18 @@ namespace system_anim
         }
         private void DrawPlanets(Graphics graphics)
         {
-
             for (int i = 0; i < _planets.Count; i++)
             {
-                _matrix.RotateAt(_planets[i].MoveTick() / _current_speed_eq, _center);
+                _matrix.RotateAt(_planets[i].MoveTick() / _current_speed_eq, Center);
                 graphics.Transform = _matrix;
                 graphics.DrawImage(_planets[i].Bitmap, _planets[i].Destination, _planets[i].Source, GraphicsUnit.Pixel);
                 _matrix.Reset();
             }
         }
 
-        private void DrawOrbits(Graphics graphics)
-        {
-            Pen pen = new Pen(Brushes.White, 3);
-            pen.DashStyle = DashStyle.Dash;
-
-            //graphics.DrawEllipse(pen, new RectangleF(_sun_dest.X - _sun_size, _sun_dest.Y - _sun_size / 2, _sun_size * 3, _sun_size * 1.5f));
-            //graphics.DrawEllipse(pen, new RectangleF(_sun_dest.X - _sun_size * 2, _sun_dest.Y - _sun_size, _sun_size * 6, _sun_size * 2));
-            //graphics.DrawEllipse(pen, new RectangleF(_sun_dest.X - _sun_size * 2, _sun_dest.Y - _sun_size * 2, _sun_size * 6, _sun_size * 2));
-        }
-
         private void FormMain_Resize(object sender, EventArgs e)
         {
+            LoadCelestialBodies();
         }
 
         private void timerAnim_Tick(object sender, EventArgs e)

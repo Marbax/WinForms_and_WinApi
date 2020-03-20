@@ -157,7 +157,6 @@
             this.Controls.Add(this.panelPic);
             this.Controls.Add(this.panelControls);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.Text = "Solar System";

@@ -89,6 +89,7 @@
     <Content Include="img\Mars.png" />
     <Content Include="img\Mercury.png" />
     <Content Include="img\Neptune.png" />
+    <Content Include="img\Pluto.png" />
     <Content Include="img\Saturn.png" />
     <Content Include="img\space_bkg.jpg" />
     <Content Include="img\Sun.png" />

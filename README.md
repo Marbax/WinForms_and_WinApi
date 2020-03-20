@@ -155,5 +155,15 @@ pow(2,16) = 65536
 
 </p></details>
 
+<details><summary> 8.GDI+ .  </summary><p>
+
+---
+
+[WinForms nad GDI+ simple animated solar system example](CW/lesson_08/system_anim "CW\lesson_08\system_anim")   
+
+---
+
+</p></details>
+
 
 
