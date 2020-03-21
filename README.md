@@ -165,5 +165,20 @@ pow(2,16) = 65536
 
 </p></details>
 
+<details><summary> 8.Custom libs .  </summary><p>
+
+- Material Design (Material Skin)
+- Metro Design (MetroModernUI)
+
+>Через Nuget установить пакет , унаследовать форму
+
+---
+
+[WinForms additional libs example](CW/lesson_09/MediaManager "CW\lesson_09\MediaManager")   
+
+---
+
+</p></details>
+
 
 
