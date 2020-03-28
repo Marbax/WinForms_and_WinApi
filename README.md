@@ -120,7 +120,7 @@ pow(2,16) = 65536
 
 ---
 
-[WinForms ListView control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
+[WinForms ListView and Entity Framework control example](CW/lesson_05/GoodsCatalog "CW\lesson_05\GoodsCatalog")   
 
 ---
 
